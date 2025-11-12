@@ -30,8 +30,8 @@ gem "image_processing", "~> 1.2"
 gem "rack-cors"
 
 gem "devise", "~> 4.9"
- gem 'devise-api', github: 'nejdetkadir/devise-api', branch: 'main'
- gem 'jsonapi-serializer'
+gem 'devise-jwt'
+gem 'jsonapi-serializer'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
