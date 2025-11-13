@@ -17,5 +17,10 @@
 #
 class Image < ApplicationRecord
   belongs_to :user
-  has_many_attached :document_image
+  has_one_attached :file_image
+
+  def file_image_url
+    return unless file_image.attached?
+    Rails.application.routes.url_helpers.rails_blob_url(file_image, only_path: false)
+  end
 end
